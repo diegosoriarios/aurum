@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import DocumentPicker from 'react-native-document-picker';
+import UserContext from '../../store/UserContext';
 
-function Process({route, navigation}) {
-  const { title, number, court, amount, customers, historicals } = route.params;
-  const {name, roleName} = customers[0];
+function Process({ route, navigation }) {
+  const { title, number, court, amount, customers, historicals, id } = route.params;
+  const { addFilesToCase, files, removeFile } = useContext(UserContext);
+
+  const { name, roleName } = customers[0];
   const [modalVisible, setModalVisible] = useState(false);
   const [ordenarPor, setOrdenarPor] = useState("Ordenar por data");
   const [tipoOrdenacao, setTipoOrdernacao] = useState("Crescente");
@@ -13,16 +17,34 @@ function Process({route, navigation}) {
   useEffect(() => {
     navigation.setOptions({
       title: 'Processo',
-      headerRight: () => <TouchableOpacity style={{padding: 10}}><Icon name="attach-file" size={30} color="#11A8F3" /></TouchableOpacity>,
-      headerLeft: () => <TouchableOpacity style={{padding:10}} onPress={() => navigation.goBack()}><Icon name="keyboard-backspace" size={30} color="#11A8F3" /></TouchableOpacity>
+      headerRight: () => <TouchableOpacity onPress={documentPicker} style={{ padding: 10 }}><Icon name="attach-file" size={30} color="#11A8F3" /></TouchableOpacity>,
+      headerLeft: () => <TouchableOpacity style={{ padding: 10 }} onPress={() => navigation.goBack()}><Icon name="keyboard-backspace" size={30} color="#11A8F3" /></TouchableOpacity>
     })
   }, []);
+
+  const documentPicker = async () => {
+    try {
+      const results = await DocumentPicker.pickMultiple({
+        type: [DocumentPicker.types.images, DocumentPicker.types.pdf],
+      });
+      for (const res of results) {
+        console.log(res);
+        addFilesToCase(res, id);
+      }
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+      } else {
+        throw err;
+      }
+    }
+  }
 
   const renderHistoric = () => {
     let historic
     if (ordenarPor === "Ordenar por data") {
       if (tipoOrdenacao === "Crescente") {
-        historic = historicals.sort((a, b) => new Date(a) - new Date(b)); 
+        historic = historicals.sort((a, b) => new Date(a) - new Date(b));
       } else {
 
       }
@@ -35,7 +57,7 @@ function Process({route, navigation}) {
 
   return (
     <ScrollView>
-      <View  style={styles.container}>
+      <View style={styles.container}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subtitle}>Numero</Text>
         <Text style={styles.description}>{number}</Text>
@@ -48,14 +70,24 @@ function Process({route, navigation}) {
         <Text style={styles.subtitle}>Valor</Text>
         <Text style={styles.description}>{amount}</Text>
         <Text style={styles.subtitle}>Anexo</Text>
-        <View style={styles.attachmentContainer}>
-          <TouchableOpacity style={styles.btnContainer}>
-            <Text style={styles.btnText}>NomeDoAnexo_máx20car.pdf</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.closeContainer}>
-            <Text><Icon name="close" size={30} color="#000" /></Text>
-          </TouchableOpacity>
-        </View>  
+        {
+          files && files.map(file => {
+            if (file.caseId == id) {
+              const fileName = file.file.name.split('.')[0].substring(0,20)
+              const fileType = file.file.name.split('.')[1]
+              return (
+                <View style={styles.attachmentContainer}>
+                  <TouchableOpacity style={styles.btnContainer}>
+                    <Text style={styles.btnText}>{`${fileName}.${fileType}`}</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.closeContainer} onPress={() => removeFile(file)}>
+                    <Text><Icon name="close" size={30} color="#000" /></Text>
+                  </TouchableOpacity>
+                </View>
+              );
+            }
+          })
+        }
       </View>
       <View style={styles.divider} />
       <View style={styles.container}>
@@ -68,8 +100,8 @@ function Process({route, navigation}) {
           </TouchableOpacity>
         </View>
 
-        { historicals && renderHistoric() }
-        
+        {historicals && renderHistoric()}
+
       </View>
 
       <Modal
@@ -91,7 +123,7 @@ function Process({route, navigation}) {
   );
 }
 
-function ListItem({item}) {
+function ListItem({ item }) {
   const months = [
     'Janeiro',
     'Fevereiro',
@@ -115,29 +147,29 @@ function ListItem({item}) {
 
   return (
     <View style={styles.cardContainer} key={id}>
-          <View style={styles.cardContainerHeader}>
-            <View style={styles.dayContainer}>
-              <Text style={styles.dayContainerText}>{day}</Text>
-            </View>
-            <View style={styles.dateContainer}>
-              <Text style={styles.monthContainer}>{months[month]}</Text>
-              <Text style={styles.yearContainer}>{year}</Text>
-            </View>
-          </View>
-          <View style={styles.content}>
-            <View style={styles.dividerContainer}>
-            <View style={styles.verticalDivider} /></View> 
-            <View style={styles.historyDescriptionBox}>
-              <Text style={styles.historyDescription}>
-                {description}  
-              </Text>
-            </View>
-          </View>
+      <View style={styles.cardContainerHeader}>
+        <View style={styles.dayContainer}>
+          <Text style={styles.dayContainerText}>{day}</Text>
         </View>
+        <View style={styles.dateContainer}>
+          <Text style={styles.monthContainer}>{months[month]}</Text>
+          <Text style={styles.yearContainer}>{year}</Text>
+        </View>
+      </View>
+      <View style={styles.content}>
+        <View style={styles.dividerContainer}>
+          <View style={styles.verticalDivider} /></View>
+        <View style={styles.historyDescriptionBox}>
+          <Text style={styles.historyDescription}>
+            {description}
+          </Text>
+        </View>
+      </View>
+    </View>
   );
 }
 
-function RadioGroup({text, selected, onSelect}) {
+function RadioGroup({ text, selected, onSelect }) {
   let child = text == selected ? <Icon name="check" color="#11A8F3" size={30} /> : <View />
   return (
     <TouchableOpacity style={styles.radioGroup} onPress={() => onSelect(text)}>

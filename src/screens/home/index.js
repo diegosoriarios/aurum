@@ -9,27 +9,18 @@ import styles from './styles';
 function Home() {
   const { cases, getCases } = useContext(UserContext);
 
-  const [currentCases, setCurrentCases] = useState(cases);
   const [searchResult, setSearchResult] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [searching, setSearching] = useState(false);
 
   useEffect(() => {
-    getCurrentCases();
+    getCases()
   }, []);
-
-  const getCurrentCases = async () => {
-    try {
-      getCases();
-    } catch (err) {
-      console.log(err);
-    } 
-  }
 
   const handleSearch = (text) => {
     setSearchString(text);
 
-    const searchFilter = currentCases.filter(ca => {
+    const searchFilter = cases.filter(ca => {
       if (ca.title.toLowerCase().includes(searchString.toLowerCase())) return ca;
     });
 
@@ -59,7 +50,7 @@ function Home() {
       </View>
       <FlatList
           keyExtractor={item => item.id}
-          data={searching? searchResult : currentCases}
+          data={searching? searchResult : cases}
           renderItem={({item}) => <HomeListItem item={item} />}
         />
       
