@@ -6,8 +6,7 @@ import CustomButtom from '../../components/CustomButton';
 import UserContext from '../../store/UserContext';
 import styles from './styles';
 
-function Login() {
-  const navigation = useNavigation();
+function Login({ navigation }) {
   const { email, changeEmail } = useContext(UserContext);
 
   const [user, setUser] = useState(email);

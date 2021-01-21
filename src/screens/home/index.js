@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { View, Text, TouchableOpacity, FlatList, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import HomeListItem from '../../components/HomeListItem';
+import HomeListItem from './components/HomeListItem';
 import UserContext from '../../store/UserContext';
 import styles from './styles';
 

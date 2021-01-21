@@ -1,0 +1,592 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontFamily": "Cabin-Bold",
+            "fontSize": 20,
+            "paddingBottom": 20,
+          }
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Numero
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 18,
+            "paddingBottom": 10,
+          }
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Cliente
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 18,
+            "paddingBottom": 10,
+          }
+        }
+      >
+        Diego
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Parte
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 18,
+            "paddingBottom": 10,
+          }
+        }
+      >
+        Test
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Forum
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 18,
+            "paddingBottom": 10,
+          }
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Valor
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 18,
+            "paddingBottom": 10,
+          }
+        }
+      >
+        12304
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "grey",
+            "fontFamily": "Cabin-SemiBold",
+            "fontSize": 14,
+          }
+        }
+      >
+        Anexo
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "height": 1,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "padding": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Cabin-SemiBold",
+              "fontSize": 20,
+            }
+          }
+        >
+          HISTÓRICO
+        </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "opacity": 1,
+            }
+          }
+        >
+          <Text>
+            Ordenar por data
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+    <Modal
+      animationType="none"
+      deviceHeight={null}
+      deviceWidth={null}
+      hardwareAccelerated={false}
+      hideModalContentWhileAnimating={false}
+      onBackdropPress={[Function]}
+      onModalHide={[Function]}
+      onModalWillHide={[Function]}
+      onModalWillShow={[Function]}
+      onRequestClose={[Function]}
+      scrollHorizontal={false}
+      scrollOffset={0}
+      scrollOffsetMax={0}
+      scrollTo={null}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      swipeDirection={
+        Array [
+          "up",
+          "left",
+          "right",
+          "down",
+        ]
+      }
+      swipeThreshold={100}
+      transparent={true}
+      visible={false}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        forwardedRef={[Function]}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "black",
+            "bottom": 0,
+            "height": 1334,
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 750,
+          }
+        }
+      />
+      <View
+        deviceHeight={null}
+        deviceWidth={null}
+        forwardedRef={[Function]}
+        hideModalContentWhileAnimating={false}
+        onBackdropPress={[Function]}
+        onModalHide={[Function]}
+        onModalWillHide={[Function]}
+        onModalWillShow={[Function]}
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        pointerEvents="box-none"
+        scrollHorizontal={false}
+        scrollOffset={0}
+        scrollOffsetMax={0}
+        scrollTo={null}
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "left": 0,
+            "margin": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateY": 0,
+              },
+            ],
+          }
+        }
+        supportedOrientations={
+          Array [
+            "portrait",
+            "landscape",
+          ]
+        }
+        swipeDirection={
+          Array [
+            "up",
+            "left",
+            "right",
+            "down",
+          ]
+        }
+        swipeThreshold={100}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "white",
+              "borderTopLeftRadius": 8,
+              "borderTopRightRadius": 8,
+              "justifyContent": "center",
+              "padding": 20,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 50,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#11A8F3",
+                      "fontSize": 30,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Material Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Cabin-Bold",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Ordenar por data
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 50,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              <View />
+            </View>
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Cabin-Bold",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Ordenar por Descriçao
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "height": 1,
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 50,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#11A8F3",
+                      "fontSize": 30,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Material Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Cabin-Bold",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Crescente
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 50,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            >
+              <View />
+            </View>
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Cabin-Bold",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Decrescente
+            </Text>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</RCTScrollView>
+`;

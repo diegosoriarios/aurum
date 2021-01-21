@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "paddingBottom": 40,
+      }
+    }
+  >
+    Login
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Usuário"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "grey",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "marginVertical": 8,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Senha"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "grey",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "marginVertical": 8,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#11A8F3",
+        "borderRadius": 8,
+        "height": 50,
+        "justifyContent": "center",
+        "marginVertical": 8,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "Cabin-SemiBold",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      ENTRAR
+    </Text>
+  </View>
+</View>
+`;
