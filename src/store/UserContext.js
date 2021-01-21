@@ -32,13 +32,17 @@ export const UserProvider = ({children}) => {
   }
 
   const removeFile = (fileToRemove) => {
-    let newArray = [...files];
     files.forEach((file, i) => {
-      if (fileToRemove.file.name === file.file.name && file.caseId === fileToRemove.caseId) {
-        newArray.splice(i, 1);
-        setFiles(newArray);
-      }
+      const hasTheSameName = fileToRemove.file.name === file.file.name;
+      const hasTheSameId = file.caseId === fileToRemove.caseId;
+      if (hasTheSameName && hasTheSameId) removeAttachmentFromFiles(i);
     })
+  }
+
+  const removeAttachmentFromFiles = (index) => {
+    let newArray = [...files];
+    newArray.splice(index, 1);
+    setFiles(newArray);
   }
 
   return (
