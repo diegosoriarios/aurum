@@ -47,10 +47,15 @@ const Process = ({ route, navigation }) => {
 
   const sortHistoric = () => {
     let historic = [...historicals];
-    if (ordenarPor === "Ordenar por data" && tipoOrdenacao === "Crescente") ascendingSortDate(historic);
-    else if (ordenarPor === "Ordenar por data" && tipoOrdenacao === "Decrescente") descendingSortDate(historic)
-    else if (ordenarPor === "Ordenar por Descriçao" && tipoOrdenacao === "Crescente") ascendingDescription(historic)
-    else if (ordenarPor === "Ordenar por Descriçao" && tipoOrdenacao === "Decrescente") descendingDescription(historic)
+    const isSortedByDate = ordenarPor === "Ordenar por data";
+    const isSortedByDescription = ordenarPor === "Ordenar por Descriçao";
+    const isAscendingSorted = tipoOrdenacao === "Crescente";
+    const isDescendingSorted = tipoOrdenacao === "Decrescente";
+
+    if (isSortedByDate && isAscendingSorted) ascendingSortDate(historic);
+    else if (isSortedByDate && isDescendingSorted) descendingSortDate(historic)
+    else if (isSortedByDescription && isAscendingSorted) ascendingDescription(historic)
+    else if (isSortedByDescription && isDescendingSorted) descendingDescription(historic)
 
     setHistoricalState(historic);
   }
