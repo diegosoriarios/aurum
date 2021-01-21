@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const AttachmentButton = ({ filename, handleOnPress }) => (
   <View style={styles.attachmentContainer}>
