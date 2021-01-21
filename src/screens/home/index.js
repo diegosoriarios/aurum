@@ -6,7 +6,7 @@ import HomeListItem from './components/HomeListItem';
 import UserContext from '../../store/UserContext';
 import styles from './styles';
 
-function Home() {
+const Home = () => {
   const { cases, getCases } = useContext(UserContext);
 
   const [searchResult, setSearchResult] = useState([]);

@@ -20,5 +20,11 @@ export const extractDate = (date) => {
     'Outubro',
     'Novembro',
     'Dezembro'
-  ]
+  ];
+
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = itemDate.getFullYear();
+  
+  return { day, month, year };
 }
