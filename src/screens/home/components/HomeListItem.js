@@ -8,7 +8,7 @@ const  HomeListItem = ({item}) => {
   const { title, number } = item;
 
   return (
-    <TouchableOpacity style={styles.list} onPress={() => navigation.push("Processo", item)}>
+    <TouchableOpacity style={styles.list} onPress={() => navigation.push("Process", item)}>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.number}>Numero</Text>
      <Text style={styles.cod}>{number}</Text>

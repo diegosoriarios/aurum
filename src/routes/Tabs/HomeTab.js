@@ -8,7 +8,7 @@ const HomeTab = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="HomePage" component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="Processo" component={Process} />
+      <Stack.Screen name="Process" component={Process} />
     </Stack.Navigator>
   );
 }
