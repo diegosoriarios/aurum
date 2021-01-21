@@ -12,7 +12,7 @@ import AttachmentButton from './components/AttachmentButton';
 import Divider from './components/Divider';
 import styles from './styles';
 
-function Process({ route, navigation }) {
+const Process = ({ route, navigation }) => {
   const { title, number, court, amount, customers, historicals, id } = route.params;
   const { addFilesToCase, files, removeFile } = useContext(UserContext);
 
@@ -22,12 +22,13 @@ function Process({ route, navigation }) {
   const [ordenarPor, setOrdenarPor] = useState("Ordenar por data");
   const [tipoOrdenacao, setTipoOrdernacao] = useState("Crescente");
 
+  const navigationOptions = {
+    title: 'Processo',
+    headerRight: () => <IconButton onPress={documentPicker} icon="attach-file" />,
+    headerLeft: () => <IconButton onPress={() => navigation.goBack()} icon="keyboard-backspace" />
+  }
   useEffect(() => {
-    navigation.setOptions({
-      title: 'Processo',
-      headerRight: () => <IconButton onPress={documentPicker} icon="attach-file" />,
-      headerLeft: () => <IconButton onPress={() => navigation.goBack()} icon="keyboard-backspace" />
-    })
+    navigation.setOptions(navigationOptions)
   }, []);
 
   const documentPicker = async () => {
