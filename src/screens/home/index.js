@@ -51,11 +51,13 @@ const Home = () => {
           <Icon name={searching ? "close" : "search"} size={30} color="#11A8F3" />
         </TouchableOpacity>
       </View>
-      <FlatList
-          keyExtractor={item => item.id}
+      {
+        <FlatList
+         keyExtractor={item => item.id}
           data={searching? searchResult : cases}
           renderItem={({item}) => <HomeListItem item={item} />}
         />
+      }
       
     </View>
   );

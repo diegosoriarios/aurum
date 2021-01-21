@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     paddingBottom: 40,
+    fontFamily: 'Cabin-SemiBold',
   },
   input: {
     borderColor: "grey",
@@ -18,6 +19,10 @@ const styles = StyleSheet.create({
     width: "100%",
     marginVertical: 8,
   },
+  error: {
+    color: 'red',
+    fontFamily: 'Cabin-SemiBold',
+  }
 });
 
 export default styles;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-function CustomButtom({onPress, text}) {
+function CustomButtom({ onPress, text }) {
   return (
     <TouchableOpacity style={styles.btnContainer} onPress={onPress}>
       <Text style={styles.btnText}>{text.toUpperCase()}</Text>

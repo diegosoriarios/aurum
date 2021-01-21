@@ -45,8 +45,21 @@ export const UserProvider = ({children}) => {
     setFiles(newArray);
   }
 
+  const logout = () => {
+    setEmail('')
+  }
+
   return (
-  <UserContext.Provider value={{ email, cases, getCases, changeEmail, files, addFilesToCase, removeFile }}>
+  <UserContext.Provider value={{ 
+    email, 
+    cases, 
+    getCases, 
+    changeEmail, 
+    files, 
+    addFilesToCase, 
+    removeFile,
+    logout,
+  }}>
     {children}
   </UserContext.Provider>
 );

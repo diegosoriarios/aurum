@@ -4,13 +4,19 @@ import { View, Text, StyleSheet } from 'react-native';
 import CustomButtom from '../../components/CustomButton';
 import UserContext from '../../store/UserContext';
 
-function Profile() {
-  const { email } = useContext(UserContext);
+function Profile({navigation}) {
+  const { email, logout } = useContext(UserContext);
+
+  const handleLogout = () => {
+    logout();
+    navigation.navigate("Login");
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Usuário</Text>
       <Text style={styles.email}>{email}</Text>
-      <CustomButtom text="Sair" onPress={() => {}} />
+      <CustomButtom text="Sair" onPress={handleLogout} />
     </View>
   );
 }

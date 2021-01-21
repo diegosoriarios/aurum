@@ -102,7 +102,7 @@ const Process = ({ route, navigation }) => {
 
       <CustomModal
         isVisible={modalVisible}
-        toogleVisible={setModalVisible} 
+        toogleModal={setModalVisible} 
         ordenarPor={ordenarPor}
         setOrdenarPor={setOrdenarPor}
         sortHistoric={sortHistoric}
