@@ -20,11 +20,14 @@ const Home = () => {
   const handleSearch = (text) => {
     setSearchString(text);
 
-    const searchFilter = cases.filter(ca => {
-      if (ca.title.toLowerCase().includes(searchString.toLowerCase())) return ca;
-    });
+    const searchFilter = cases.filter(ca => filterString(ca));
 
     setSearchResult(searchFilter);
+  }
+
+  const filterString = (string) => {
+    const searchStringIsInTitle = string.title.toLowerCase().includes(searchString.toLowerCase());
+    if (searchStringIsInTitle) return string;
   }
 
   const handleCloseSearch = () => {
