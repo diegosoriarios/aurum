@@ -5,3 +5,20 @@ export const descendingSortDate = (dates) => dates.sort((a,b) => new Date(b.date
 export const ascendingDescription = (descriptions) => descriptions.sort((a,b) => (a.description > b.description) ? 1 : ((b.description > a.description) ? -1 : 0)); 
 
 export const descendingDescription = (descriptions) => descriptions.sort((a,b) => (a.description < b.description) ? 1 : ((b.description < a.description) ? -1 : 0)); 
+
+export const extractDate = (date) => {
+  const months = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro'
+  ]
+}

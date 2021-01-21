@@ -1,27 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { extractDate } from '../../../utils/DateHelper';
 
 const ProcessListItem = ({ item }) => {
-  const months = [
-    'Janeiro',
-    'Fevereiro',
-    'Março',
-    'Abril',
-    'Maio',
-    'Junho',
-    'Julho',
-    'Agosto',
-    'Setembro',
-    'Outubro',
-    'Novembro',
-    'Dezembro'
-  ]
-
   const { description, date, id } = item;
   const itemDate = new Date(date);
-  const day = itemDate.getDate();
-  const month = itemDate.getMonth();
-  const year = itemDate.getFullYear();
+  const { day, month, year } = extractDate(itemDate);
 
   return (
     <View style={styles.cardContainer} key={id}>
@@ -30,7 +14,7 @@ const ProcessListItem = ({ item }) => {
           <Text style={styles.dayContainerText}>{day}</Text>
         </View>
         <View style={styles.dateContainer}>
-          <Text style={styles.monthContainer}>{months[month]}</Text>
+          <Text style={styles.monthContainer}>{month}</Text>
           <Text style={styles.yearContainer}>{year}</Text>
         </View>
       </View>
