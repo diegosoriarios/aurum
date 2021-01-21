@@ -80,7 +80,7 @@ const Process = ({ route, navigation }) => {
             if (file.caseId == id) {
               const fileName = file.file.name.split('.')[0].substring(0,20)
               const fileType = file.file.name.split('.')[1]
-              return <AttachmentButton filename={`${fileName}.${fileType}`} handleOnPress={() => removeFile(file)} />
+              return <AttachmentButton key={file.fileName} filename={`${fileName}.${fileType}`} handleOnPress={() => removeFile(file)} />
             }
           })
         }
