@@ -2,10 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { extractDate } from '../../../utils/DateHelper';
 
-const ProcessListItem = ({ item }) => {
-  const { description, date, id } = item;
-  const itemDate = new Date(date);
-  const { day, month, year } = extractDate(itemDate);
+const ProcessListItem = ({ item: { description, date, id } }) => {
+  const { day, month, year } = extractDate(new Date(date));
 
   return (
     <View style={styles.cardContainer} key={id}>
